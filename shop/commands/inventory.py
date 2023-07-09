@@ -6,7 +6,7 @@ inventory = InventoryService()
 
 app = typer.Typer()
 
-
+@app.co
 @app.command()
 def restock(
     name: Annotated[str, typer.Option(prompt=True)],

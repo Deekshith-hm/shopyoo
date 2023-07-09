@@ -9,9 +9,32 @@ from shop.exceptions import ShopYooExit
 
 
 # database connection
-db = SqliteDatabase("shopyoo.db")
+db = SqliteDatabase("shopyoo.db",pragmas={"foreign_key":1})
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 class User(Model):
     username = CharField(unique=True)
     password = CharField()

@@ -7,6 +7,11 @@ console = Console()
 
 
 class InventoryService:
+    def remove(self,name: str):
+        item=Inventory.get(name=name)
+        item.delete_instance()
+        print(f"{item.name}removed!")
+        
     def restock(self, name: str, price: str, quantity: int):
         try:
             stock = Inventory.create(name=name, price=price, quantity=quantity)
